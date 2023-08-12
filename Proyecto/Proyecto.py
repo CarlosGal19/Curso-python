@@ -39,11 +39,12 @@ def procesar_pagina(soup):
 
     for i in arrs:
         palabra= i.split()
+        palabra_inicial=palabra[0]
         palabra_final=palabra[-1]
         if palabra_final == "answers":
-            respuestas.append(palabra)
+            respuestas.append(palabra_inicial[0])
         elif palabra_final == "views":
-            vistas.append(palabra)
+            vistas.append(palabra_inicial[0])
 
     min_length = min(len(preguntas), len(autores), len(respuestas), len(vistas))
 
@@ -83,6 +84,6 @@ def manejar_paginacion(url_base, num_paginas):
 
 url_base="https://math.stackexchange.com/questions?tab=newest&page="
 
-num_paginas=10
+num_paginas=3
 
 manejar_paginacion(url_base,num_paginas)

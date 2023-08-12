@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-# py -m uvicorn main:app --reload
+# py -m uvicorn main:app --reload (poder consultar en el host local)
 
 app = FastAPI()
 
