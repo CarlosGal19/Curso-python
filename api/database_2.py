@@ -1,7 +1,9 @@
 import sqlite3
 from fastapi import FastAPI
 from pydantic import BaseModel
-# py -m uvicorn main:app --reload
+
+# py -m uvicorn database_2:app --reload
+# http://127.0.0.1:8000/docs
 
 conn = sqlite3.connect('hot100.db')
 
